@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2760ae74a9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://bootswatch.com/5/darkly/bootstrap.min.css">
+    <title>Booklist</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="display-4 text-center">
+            <i class="fa-solid fa-book text-primary"></i>
+            Book<span class="text-primary">List</span></h1>
+            <form id="book-form">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="isbn">ISBN</label>
+                    <input type="text" id="isbn" class="form-control">
+                </div>
+                <div class="d-grid gap-2 mt-4">
+                    <input type="button" class="btn btn-block btn-primary" id="add-book" value="Add Book">  
+                </div>
+                <div class="search-section mt-4">
+                    <label for="group" class="btn-sm">Look for:</label>
+                    <br>
+                    <div class="btn-group" role="group">
+                        <input type="checkbox" class="btn-check btn-sm" name="btnradio" id="all-check" autocomplete="off" checked>
+                        <label class="btn btn-sm btn-outline-primary" for="all-check">All</label>
+                        <input type="checkbox" class="btn-check btn-sm" name="btnradio" id="title-check" autocomplete="off" unchecked>
+                        <label class="btn btn-sm btn-outline-primary" for="title-check">Title</label>
+                        <input type="checkbox" class="btn-sm btn-check" name="btnradio" id="author-check" autocomplete="off" unchecked>
+                        <label class="btn btn-sm btn-outline-primary" for="author-check">Author</label>
+                        <input type="checkbox" class="btn-sm btn-check" name="btnradio" id="isbn-check" autocomplete="off" unchecked>
+                        <label class="btn btn-sm btn-outline-primary" for="isbn-check">ISBN</label>
+                    </div>
+                    <input type="text" placeholder="Search..." id="search-input" class="form-control">
+                </div>
+            </form>
+            <table class="table table-striped mt-5">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>ISBN</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="book-list"></tbody>
+            </table>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
